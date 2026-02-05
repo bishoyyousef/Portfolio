@@ -45,7 +45,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="https://www.canva.com/design/DAGu70dkeLA/MfYq4J1R2BRU1M4XsxErcQ/edit?utm_content=DAGu70dkeLA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+              href="https://drive.google.com/file/d/1yZ7utbtv8LdrrLI3VDg6LnIGSLSLewDk/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className={`px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
