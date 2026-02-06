@@ -30,13 +30,13 @@ function Home() {
             <div className="flex items-center space-x-4 mb-8">
                 <hr className="w-12 border-t-2 border-indigo-400 dark:border-indigo-600" />
                 <p className="text-xl md:text-2xl font-medium text-slate-600 dark:text-slate-400">
-                    Full Stack Developer
+                    Software engineer 
                 </p>
                 <hr className="w-12 border-t-2 border-indigo-400 dark:border-indigo-600" />
             </div>
 
             <p className={`text-lg md:text-xl max-w-2xl mb-8 ${isDarkMode ? 'text-slate-50':'text-slate-900'}`}>
-                Crafting exceptional web applications with a focus on seamless front-end interfaces and scalable back-end APIs.
+                software developer specializing in frontend and mobile development, AI integration, and IT systems.
             </p>
 
             <div className="flex flex-wrap justify-center gap-2 mb-8">
