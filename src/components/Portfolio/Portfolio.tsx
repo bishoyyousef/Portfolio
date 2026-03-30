@@ -10,7 +10,7 @@ const Portfolio = () => {
       description: "A movies website web application built with Next.js and TMDB API, featuring a responsive design, dynamic movie listings, detailed movie pages, and a user-friendly interface for seamless browsing and discovery of movies.", 
       link: "https://movies-website-oj1a.vercel.app/", 
     },
-    {
+    /*{
       imageSrc: "Projects/PatientManagementSystem.png",
       imageAlt: "Intradialytic",
       title: "Intradialytic",
@@ -23,7 +23,7 @@ const Portfolio = () => {
       title: "Spain Residency Landing Page",
       description: "A responsive Next.js landing page for Ziada Company, optimized for all devices, showcasing Spain residency benefits, available packages, and prominent contact information with a strong call-to-action to drive user engagement and conversions.",
       link: "https://spain-residency-landing-page.vercel.app/",
-    },
+    },*/
     {
       imageSrc: "Projects/ECommerce.png",
       imageAlt: "E-Commerce App",
