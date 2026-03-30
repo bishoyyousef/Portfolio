@@ -4,6 +4,13 @@ import Card from '../Card/Card';
 const Portfolio = () => {
   const projects = [
     {
+      imageSrc: "Projects/movies-website.png",
+      imageAlt: "movies-website",
+      title: "movies-website",
+      description: "A movies website web application built with Next.js and TMDB API, featuring a responsive design, dynamic movie listings, detailed movie pages, and a user-friendly interface for seamless browsing and discovery of movies.", 
+      link: "https://movies-website-oj1a.vercel.app/", 
+    },
+    {
       imageSrc: "Projects/PatientManagementSystem.png",
       imageAlt: "Intradialytic",
       title: "Intradialytic",
