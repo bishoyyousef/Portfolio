@@ -30,7 +30,7 @@ function Home() {
             <div className="flex items-center space-x-4 mb-8">
                 <hr className="w-12 border-t-2 border-indigo-400 dark:border-indigo-600" />
                 <p className="text-xl md:text-2xl font-medium text-slate-600 dark:text-slate-400">
-                    Software engineer 
+                    frontend developer  
                 </p>
                 <hr className="w-12 border-t-2 border-indigo-400 dark:border-indigo-600" />
             </div>
