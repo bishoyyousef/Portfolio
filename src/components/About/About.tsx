@@ -1,10 +1,7 @@
 import React from 'react';
-import { useTypedSelector } from "@/Types/Hooks";
 import Link from 'next/link';
 
 const About = () => {
-  const isDarkMode = useTypedSelector(state => state.Dark);
-
   return (
     <section id="about" className={`py-24 px-6 lg:px-8`}>
       <div className="max-w-7xl mx-auto">
@@ -28,7 +25,7 @@ const About = () => {
           {/* Content Section with Enhanced Typography */}
           <div className="lg:w-3/5 space-y-6">
             <div className="relative">
-              <h2 className={`text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent ${isDarkMode? 'text-white':''}`}>
+              <h2 className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
                 About Me
               </h2>
               <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"></div>
@@ -37,29 +34,29 @@ const About = () => {
             {/* paragraphs */}
             {/* paragraphs */}
 <div className="space-y-6 text-lg leading-relaxed">
-  <p className={`text-slate-700 ${isDarkMode ? 'dark:text-slate-300' : ''} relative pl-6 border-l-2 border-indigo-200 hover:border-indigo-400 transition-colors duration-300`}>
+  <p className="text-slate-700 dark:text-slate-300 relative pl-6 border-l-2 border-indigo-200 dark:border-indigo-800 hover:border-indigo-400 transition-colors duration-300">
     <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-600 rounded-full"></span>
     Hello! I&apos;m <span className="font-semibold text-indigo-700 dark:text-indigo-400">Bishoy Yousef</span>, a frontend developer focused on building responsive and scalable web applications with strong attention to performance and user experience. I specialize in developing modern interfaces using{' '}
-    <span className={`font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm ${isDarkMode? '':'text-white'}`}>React</span>,{' '}
-    <span className={`font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm ${isDarkMode? '':'text-white'}`}>Next.js</span>,{' '}
-    <span className={`font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm ${isDarkMode? '':'text-white'}`}>JavaScript</span>,{' '}
-    <span className={`font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm ${isDarkMode? '':'text-white'}`}>HTML</span>, and{' '}
-    <span className={`font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm ${isDarkMode? '':'text-white'}`}>CSS</span>. I focus on writing clean, maintainable code and delivering intuitive, high-quality user interfaces.
+    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">React</span>,{' '}
+    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">Next.js</span>,{' '}
+    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">JavaScript</span>,{' '}
+    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">HTML</span>, and{' '}
+    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">CSS</span>. I focus on writing clean, maintainable code and delivering intuitive, high-quality user interfaces.
   </p>
 
-  <p className={`text-slate-700 ${isDarkMode ? 'dark:text-slate-300' : ''} relative pl-6 border-l-2 border-purple-200 hover:border-purple-400 transition-colors duration-300`}>
+  <p className="text-slate-700 dark:text-slate-300 relative pl-6 border-l-2 border-purple-200 dark:border-purple-800 hover:border-purple-400 transition-colors duration-300">
     <span className="absolute -left-2 top-2 w-3 h-3 bg-purple-600 rounded-full"></span>
     I have hands-on experience in building real-world applications and integrating frontend systems with{' '}
     <span className="font-semibold text-purple-700 dark:text-purple-400">RESTful APIs</span>. I also worked with{' '}
-    <span className={`font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm ${isDarkMode? '':'text-white'}`}>Flutter</span> and{' '}
-    <span className={`font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm ${isDarkMode? '':'text-white'}`}>Dart</span> to build cross-platform mobile applications. In addition, I have a solid foundation in{' '}
+    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">Flutter</span> and{' '}
+    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">Dart</span> to build cross-platform mobile applications. In addition, I have a solid foundation in{' '}
     <span className="font-semibold text-purple-700 dark:text-purple-400">networking fundamentals</span> and IT systems, which helps me understand real-world environments and build more reliable applications.
   </p>
 
-  <p className={`text-slate-700 ${isDarkMode ? 'dark:text-slate-300' : ''} relative pl-6 border-l-2 border-indigo-200 hover:border-indigo-400 transition-colors duration-300`}>
+  <p className="text-slate-700 dark:text-slate-300 relative pl-6 border-l-2 border-indigo-200 dark:border-indigo-800 hover:border-indigo-400 transition-colors duration-300">
     <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-600 rounded-full"></span>
-    As a <span className={`font-semibold text-purple-700 dark:text-purple-400`}>detail-oriented</span> and{' '}
-    <span className={`font-semibold text-purple-700 dark:text-purple-400`}>collaborative developer</span>, I focus on delivering production-ready solutions. I enjoy working in agile environments, solving real-world problems, and continuously improving my technical and problem-solving skills to build impactful digital products.
+    As a <span className="font-semibold text-purple-700 dark:text-purple-400">detail-oriented</span> and{' '}
+    <span className="font-semibold text-purple-700 dark:text-purple-400">collaborative developer</span>, I focus on delivering production-ready solutions. I enjoy working in agile environments, solving real-world problems, and continuously improving my technical and problem-solving skills to build impactful digital products.
   </p>
 </div>
             <div className="pt-4">

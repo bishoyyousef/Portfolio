@@ -11,6 +11,14 @@ import Navbar from '@/components/NavBar/NavBar';
 const App = () => {
   const isDarkMode = useTypedSelector(state => state.Dark);
 
+  React.useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
   return (
     <div className={`font-sans bg-slate-50 text-slate-800 ${isDarkMode ? 'bg-slate-900 dark:text-slate-50' : ''} transition-colors duration-500`}>
       <Navbar />

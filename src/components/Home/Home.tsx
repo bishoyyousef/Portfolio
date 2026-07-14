@@ -1,9 +1,7 @@
 import React from 'react'
-import { useTypedSelector } from "@/Types/Hooks";
 import Link from 'next/link';
 
 function Home() {
-    const isDarkMode = useTypedSelector(state => state.Dark);
     
     const skills = [
         "Next.js",
@@ -17,26 +15,26 @@ function Home() {
     return (
         <section
             id="hero"
-            className={`min-h-screen flex flex-col justify-center items-center text-center ${isDarkMode ? 'text-slate-900' : 'dark:text-slate-100'}  `}
+            className="min-h-screen flex flex-col justify-center items-center text-center text-slate-800 dark:text-slate-100"
         >
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-white" style={{ 
                 background: 'linear-gradient(to right, #6d28d9, #9333ea, #c084fc)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
             }}>
-                bishoy yousef
+                Bishoy Yousef
             </h1>
 
             <div className="flex items-center space-x-4 mb-8">
                 <hr className="w-12 border-t-2 border-indigo-400 dark:border-indigo-600" />
                 <p className="text-xl md:text-2xl font-medium text-slate-600 dark:text-slate-400">
-                    frontend developer  
+                    Frontend Developer  
                 </p>
                 <hr className="w-12 border-t-2 border-indigo-400 dark:border-indigo-600" />
             </div>
 
-            <p className={`text-lg md:text-xl max-w-2xl mb-8 ${isDarkMode ? 'text-slate-50':'text-slate-900'}`}>
-                software developer specializing in frontend and mobile development, AI integration, and IT systems.
+            <p className="text-lg md:text-xl max-w-2xl mb-8 text-slate-600 dark:text-slate-300">
+                Software developer specializing in frontend and mobile development, AI integration, and IT systems.
             </p>
 
             <div className="flex flex-wrap justify-center gap-2 mb-8">

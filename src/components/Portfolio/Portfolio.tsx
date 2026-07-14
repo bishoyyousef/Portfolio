@@ -10,6 +10,27 @@ const Portfolio = () => {
       description: "A movies website web application built with Next.js and TMDB API, featuring a responsive design, dynamic movie listings, detailed movie pages, and a user-friendly interface for seamless browsing and discovery of movies.", 
       link: "https://movies-website-oj1a.vercel.app/", 
     },
+    {
+      imageSrc: "Projects/kanban.png",
+      imageAlt: "Kanban Task Management App",
+      title: "Kanban Task Management App",
+      description: "A high-fidelity task management board built to streamline team workflows. Features board creation, drag-and-drop task reordering, column customizability, interactive subtask tracking, and local state persistence.",
+      link: "https://kanban-mu-liard.vercel.app/",
+    },
+    {
+      imageSrc: "Projects/link-vault.png",
+      imageAlt: "LinkVault Dashboard",
+      title: "LinkVault Dashboard",
+      description: "A glassmorphism-inspired personal bookmark manager and note-taking dashboard. Built with pure Vanilla JS and HTML5/CSS3, featuring JWT auth, client-side searching and filtering, categories, nested notes, and JSON export backups.",
+      link: "https://link-vault-slqe.vercel.app/login.html",
+    },
+    {
+      imageSrc: "Projects/clinic.png",
+      imageAlt: "Clinic Management Dashboard",
+      title: "Clinic Management Dashboard",
+      description: "A production-style Angular 19 administrative clinic dashboard. Features JWT role-based access control, appointment calendar scheduler, receptionist wizards, patient/staff directory management, and reactive UI driven by Angular Signals.",
+      link: "https://clinic-omega-five.vercel.app/calendar",
+    },
     /*{
       imageSrc: "Projects/PatientManagementSystem.png",
       imageAlt: "Intradialytic",
