@@ -1,17 +1,18 @@
 "use client";
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTypedSelector } from "@/Types/Hooks";
+import Navbar from '@/components/NavBar/NavBar';
+import Home from '@/components/Home/Home';
 import About from '@/components/About/About';
+import Skills from '@/components/Skills/Skills';
 import Portfolio from '@/components/Portfolio/Portfolio';
 import Contact from '@/components/Contact/Contact';
 import Footer from '@/components/Footer';
-import Home from '@/components/Home/Home';
-import Navbar from '@/components/NavBar/NavBar';
 
-const App = () => {
-  const isDarkMode = useTypedSelector(state => state.Dark);
+const App: React.FC = () => {
+  const isDarkMode = useTypedSelector((state) => state.Dark);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -20,11 +21,16 @@ const App = () => {
   }, [isDarkMode]);
 
   return (
-    <div className={`font-sans bg-slate-50 text-slate-800 ${isDarkMode ? 'bg-slate-900 dark:text-slate-50' : ''} transition-colors duration-500`}>
+    <div
+      className={`min-h-screen font-sans transition-colors duration-300 ${
+        isDarkMode ? 'bg-portfolio-dark' : 'bg-portfolio-light'
+      }`}
+    >
       <Navbar />
-      <main className="container mx-auto">
+      <main className="w-full">
         <Home />
         <About />
+        <Skills />
         <Portfolio />
         <Contact />
       </main>

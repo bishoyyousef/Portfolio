@@ -1,72 +1,57 @@
+"use client";
 import React from 'react';
-import Link from 'next/link';
 
-const About = () => {
+const About: React.FC = () => {
   return (
-    <section id="about" className={`py-24 px-6 lg:px-8`}>
+    <section id="about" className="py-20 px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center lg:space-x-16 space-y-12 lg:space-y-0">
-          {/* Image Section */}
-          <div className="lg:w-2/5 flex justify-center lg:justify-start">
+          {/* Profile Photo Section */}
+          <div className="lg:w-2/5 flex justify-center">
             <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500"></div>
-              <div className="absolute -inset-2 bg-gradient-to-r from-indigo-600/30 to-purple-600/30 rounded-full blur-md group-hover:blur-lg transition-all duration-500"></div>
+              {/* Outer glossy aura */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur-lg opacity-40 group-hover:opacity-75 transition-opacity duration-500"></div>
               
+              {/* Profile Image */}
               <img
                 src="bishoyyousef2.png"
-                alt="bishoy yousef"
-                className="relative rounded-full w-64 h-64 lg:w-80 lg:h-80 object-cover border-4 border-indigo-600 shadow-2xl transition-all duration-500 transform hover:scale-105 hover:rotate-2 hover:border-indigo-500"
+                alt="Bishoy Yousef"
+                className="relative rounded-full w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-cover border-4 border-indigo-500/80 shadow-2xl transition-all duration-300 transform group-hover:scale-[1.02]"
               />
-              
-              <div className="absolute inset-0 rounded-full border-2 border-indigo-400/30 scale-110 animate-pulse"></div>
             </div>
           </div>
 
-          {/* Content Section with Enhanced Typography */}
+          {/* Biography Content */}
           <div className="lg:w-3/5 space-y-6">
-            <div className="relative">
-              <h2 className="text-4xl lg:text-5xl font-bold mb-2 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold mb-3 tracking-tight text-slate-900 dark:text-white">
                 About Me
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full"></div>
+              <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full"></div>
             </div>
 
-            {/* paragraphs */}
-            {/* paragraphs */}
-<div className="space-y-6 text-lg leading-relaxed">
-  <p className="text-slate-700 dark:text-slate-300 relative pl-6 border-l-2 border-indigo-200 dark:border-indigo-800 hover:border-indigo-400 transition-colors duration-300">
-    <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-600 rounded-full"></span>
-    Hello! I&apos;m <span className="font-semibold text-indigo-700 dark:text-indigo-400">Bishoy Yousef</span>, a frontend developer focused on building responsive and scalable web applications with strong attention to performance and user experience. I specialize in developing modern interfaces using{' '}
-    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">React</span>,{' '}
-    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">Next.js</span>,{' '}
-    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">JavaScript</span>,{' '}
-    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">HTML</span>, and{' '}
-    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">CSS</span>. I focus on writing clean, maintainable code and delivering intuitive, high-quality user interfaces.
-  </p>
+            <div className="space-y-4 text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+              <p>
+                Hello! I&apos;m <span className="font-semibold text-indigo-600 dark:text-indigo-400">Bishoy Yousef</span>, a Full-Stack Developer with a primary focus on <span className="font-semibold">Frontend Development</span>. I build modern, responsive, and intuitive web interfaces that deliver great performance and user experience.
+              </p>
 
-  <p className="text-slate-700 dark:text-slate-300 relative pl-6 border-l-2 border-purple-200 dark:border-purple-800 hover:border-purple-400 transition-colors duration-300">
-    <span className="absolute -left-2 top-2 w-3 h-3 bg-purple-600 rounded-full"></span>
-    I have hands-on experience in building real-world applications and integrating frontend systems with{' '}
-    <span className="font-semibold text-purple-700 dark:text-purple-400">RESTful APIs</span>. I also worked with{' '}
-    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">Flutter</span> and{' '}
-    <span className="font-medium bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded text-sm text-slate-800 dark:text-slate-200">Dart</span> to build cross-platform mobile applications. In addition, I have a solid foundation in{' '}
-    <span className="font-semibold text-purple-700 dark:text-purple-400">networking fundamentals</span> and IT systems, which helps me understand real-world environments and build more reliable applications.
-  </p>
+              <p>
+                My frontend toolkit includes <span className="font-medium">React</span>, <span className="font-medium">Next.js</span>, <span className="font-medium">Angular</span>, <span className="font-medium">TypeScript</span>, <span className="font-medium">JavaScript</span>, <span className="font-medium">HTML5</span>, and <span className="font-medium">CSS3 / Tailwind CSS</span>. On the backend, I work with <span className="font-medium">Node.js</span>, <span className="font-medium">Express.js</span>, <span className="font-medium">MongoDB</span>, and <span className="font-medium">REST APIs</span>.
+              </p>
 
-  <p className="text-slate-700 dark:text-slate-300 relative pl-6 border-l-2 border-indigo-200 dark:border-indigo-800 hover:border-indigo-400 transition-colors duration-300">
-    <span className="absolute -left-2 top-2 w-3 h-3 bg-indigo-600 rounded-full"></span>
-    As a <span className="font-semibold text-purple-700 dark:text-purple-400">detail-oriented</span> and{' '}
-    <span className="font-semibold text-purple-700 dark:text-purple-400">collaborative developer</span>, I focus on delivering production-ready solutions. I enjoy working in agile environments, solving real-world problems, and continuously improving my technical and problem-solving skills to build impactful digital products.
-  </p>
-</div>
-            <div className="pt-4">
-              <div className="flex items-center space-x-2 text-slate-600 dark:text-slate-400">
-                <div className="w-2 h-2 bg-indigo-600 rounded-full animate-pulse"></div>
-                <p className="text-sm font-medium">Ready to collaborate on your next project?</p>
-                <Link href="#contact" className="underline text-indigo-600 hover:text-indigo-800 dark:text-indigo-400 dark:hover:text-indigo-200 ml-1">
-                  Contact with me
-                </Link>
-              </div>
+              <p>
+                I focus on writing clean, maintainable code, integrating frontend applications with backend services, and continuously honing my technical skills to deliver reliable, end-to-end digital solutions.
+              </p>
+            </div>
+
+            <div className="pt-2 flex items-center space-x-3">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <p className="text-sm font-medium text-slate-600 dark:text-slate-400">
+                Open to collaborations and web development opportunities.
+              </p>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useTypedSelector, useTypedDispatch } from "@/Types/Hooks";
 import { Toggle } from "@/StateStore/Reducers/DarkState";
-import Link from "next/link";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function Navbar() {
   const dispatch = useTypedDispatch();
@@ -14,62 +14,85 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 bg-slate-50/90 ${isDarkMode ? "dark:bg-slate-900/90" : ""} backdrop-blur-sm shadow-sm py-4 transition-colors duration-500`}
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
+        isDarkMode
+          ? "bg-[#090d16]/90 text-slate-100 border-b border-slate-800/80"
+          : "bg-white/90 text-slate-800 border-b border-slate-200/80"
+      } backdrop-blur-md shadow-sm`}
     >
-      {/* center container with max width */}
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center justify-between h-12">
-          {/* brand */}
+        <div className="flex items-center justify-between h-16">
+          {/* Brand */}
           <div className="flex items-center">
-            <Link
+            <a
               href="#"
-              className="text-xl font-bold rounded-lg transition-colors duration-300 hover:text-indigo-600"
+              className="text-xl font-bold tracking-tight transition-colors duration-200 hover:text-indigo-600 dark:hover:text-indigo-400"
             >
-              bishoy yousef
-            </Link>
+              Bishoy Yousef
+            </a>
           </div>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#" className="transition-colors duration-300 hover:text-indigo-600">
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a
+              href="#"
+              className="transition-colors duration-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
               Home
-            </Link>
-            <Link href="#about" className="transition-colors duration-300 hover:text-indigo-600">
+            </a>
+            <a
+              href="#about"
+              className="transition-colors duration-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
               About
-            </Link>
-            <Link href="#portfolio" className="transition-colors duration-300 hover:text-indigo-600">
+            </a>
+            <a
+              href="#skills"
+              className="transition-colors duration-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
+              Skills
+            </a>
+            <a
+              href="#portfolio"
+              className="transition-colors duration-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
               Projects
-            </Link>
-            <Link href="#contact" className="transition-colors duration-300 hover:text-indigo-600">
+            </a>
+            <a
+              href="#contact"
+              className="transition-colors duration-200 hover:text-indigo-600 dark:hover:text-indigo-400"
+            >
               Contact
-            </Link>
+            </a>
 
-            <Link
+            <div className="h-4 w-px bg-slate-300 dark:bg-slate-700 mx-1"></div>
+
+            {/* See My CV Button */}
+            <a
               href="https://drive.google.com/file/d/1yZ7utbtv8LdrrLI3VDg6LnIGSLSLewDk/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-4 py-2 rounded-lg font-medium transition-colors duration-300 ${
-                isDarkMode ? "bg-indigo-600 text-slate-50 hover:bg-indigo-700" : "bg-indigo-500 text-white hover:bg-indigo-600"
-              }`}
+              className="px-4 py-2 rounded-lg text-xs md:text-sm font-semibold transition-all duration-200 bg-indigo-600 hover:bg-indigo-700 text-white shadow-md hover:shadow-indigo-500/25 active:scale-95"
               aria-label="View my CV"
             >
               See My CV
-            </Link>
+            </a>
 
+            {/* Theme Toggle Button (Sun / Moon) */}
             <button
               id="theme-toggle"
               onClick={handleThemeToggle}
-              className={`p-2 cursor-pointer rounded-full hover:bg-slate-200 ${isDarkMode ? "dark:hover:bg-slate-700" : ""} transition-colors duration-300 focus:outline-none`}
+              className={`p-2.5 rounded-full transition-all duration-300 transform hover:scale-110 focus:outline-none ${
+                isDarkMode
+                  ? "bg-slate-800 text-amber-400 hover:bg-slate-700 hover:text-amber-300 shadow-md"
+                  : "bg-indigo-50 text-amber-500 hover:bg-indigo-100 hover:text-amber-600 shadow-sm"
+              }`}
               aria-label="Toggle theme"
             >
               {isDarkMode ? (
-                <svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 10a5 5 0 1110 0 5 5 0 01-10 0z"></path>
-                </svg>
+                <FaMoon className="w-5 h-5 transition-transform duration-300 transform -rotate-12 hover:rotate-0" />
               ) : (
-                <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.293 13.293a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414l3 3a1 1 0 010 1.414zM10 18a8 8 0 100-16 8 8 0 000 16zM10 4a6 6 0 00-6 6c0 3.314 2.686 6 6 6s6-2.686 6-6c0-3.314-2.686-6-6-6zM3.207 7.707a1 1 0 011.414-1.414l3 3a1 1 0 01-1.414 1.414l-3-3z"></path>
-                </svg>
+                <FaSun className="w-5 h-5 transition-transform duration-300 transform rotate-0 hover:rotate-45" />
               )}
             </button>
           </nav>
@@ -78,17 +101,17 @@ export default function Navbar() {
           <div className="flex items-center md:hidden gap-2">
             <button
               onClick={handleThemeToggle}
-              className={`p-2 cursor-pointer rounded-full hover:bg-slate-200 ${isDarkMode ? "dark:hover:bg-slate-700" : ""} transition-colors duration-300 focus:outline-none`}
+              className={`p-2.5 rounded-full transition-all duration-300 focus:outline-none ${
+                isDarkMode
+                  ? "bg-slate-800 text-amber-400"
+                  : "bg-indigo-50 text-amber-500"
+              }`}
               aria-label="Toggle theme"
             >
               {isDarkMode ? (
-                <svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 10a5 5 0 1110 0 5 5 0 01-10 0z"></path>
-                </svg>
+                <FaMoon className="w-5 h-5" />
               ) : (
-                <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.293 13.293a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414l3 3a1 1 0 010 1.414zM10 18a8 8 0 100-16 8 8 0 000 16zM10 4a6 6 0 00-6 6c0 3.314 2.686 6 6 6s6-2.686 6-6c0-3.314-2.686-6-6-6zM3.207 7.707a1 1 0 011.414-1.414l3 3a1 1 0 01-1.414 1.414l-3-3z"></path>
-                </svg>
+                <FaSun className="w-5 h-5" />
               )}
             </button>
 
@@ -97,9 +120,8 @@ export default function Navbar() {
               aria-expanded={mobileOpen}
               aria-controls="mobile-menu"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
-              className="inline-flex items-center justify-center p-2 rounded-md hover:bg-slate-200 transition-colors duration-200 focus:outline-none"
+              className="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors duration-200 focus:outline-none"
             >
-              {/* hamburger / close icons */}
               {mobileOpen ? (
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M6 18L18 6M6 6l12 12" />
@@ -114,40 +136,64 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu panel */}
+      {/* Mobile Menu Panel */}
       <div
         id="mobile-menu"
-        className={`md:hidden bg-slate-50/95 ${isDarkMode ? "dark:bg-slate-900/95" : ""} transition-max-height duration-300 overflow-hidden`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isDarkMode ? "bg-[#090d16] border-b border-slate-800" : "bg-white border-b border-slate-200"
+        }`}
         style={{
-          // simple slide down using max-height; adjust maxHeight for number of items
           maxHeight: mobileOpen ? "320px" : "0px",
         }}
       >
-        <div className="px-4 pt-2 pb-4 space-y-2">
-          <Link href="#" onClick={() => setMobileOpen(false)} className="block w-full py-2 rounded-md transition-colors duration-200 hover:bg-slate-100">
-            Home
-          </Link>
-          <Link href="#about" onClick={() => setMobileOpen(false)} className="block w-full py-2 rounded-md transition-colors duration-200 hover:bg-slate-100">
-            About
-          </Link>
-          <Link href="#portfolio" onClick={() => setMobileOpen(false)} className="block w-full py-2 rounded-md transition-colors duration-200 hover:bg-slate-100">
-            Projects
-          </Link>
-          <Link href="#contact" onClick={() => setMobileOpen(false)} className="block w-full py-2 rounded-md transition-colors duration-200 hover:bg-slate-100">
-            Contact
-          </Link>
-
-          <Link
-            href="https://drive.google.com/file/d/1yZ7utbtv8LdrrLI3VDg6LnIGSLSLewDk/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="px-4 pt-3 pb-5 space-y-3 font-medium text-sm">
+          <a
+            href="#"
             onClick={() => setMobileOpen(false)}
-            className={`block text-center px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
-              isDarkMode ? "bg-indigo-600 text-slate-50 hover:bg-indigo-700" : "bg-indigo-500 text-white hover:bg-indigo-600"
-            }`}
+            className="block px-3 py-2 rounded-md transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
           >
-            See My CV
-          </Link>
+            Home
+          </a>
+          <a
+            href="#about"
+            onClick={() => setMobileOpen(false)}
+            className="block px-3 py-2 rounded-md transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            About
+          </a>
+          <a
+            href="#skills"
+            onClick={() => setMobileOpen(false)}
+            className="block px-3 py-2 rounded-md transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            Skills
+          </a>
+          <a
+            href="#portfolio"
+            onClick={() => setMobileOpen(false)}
+            className="block px-3 py-2 rounded-md transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            Projects
+          </a>
+          <a
+            href="#contact"
+            onClick={() => setMobileOpen(false)}
+            className="block px-3 py-2 rounded-md transition-colors duration-200 hover:bg-slate-100 dark:hover:bg-slate-800"
+          >
+            Contact
+          </a>
+
+          <div className="pt-2 px-3">
+            <a
+              href="https://drive.google.com/file/d/1yZ7utbtv8LdrrLI3VDg6LnIGSLSLewDk/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileOpen(false)}
+              className="block w-full text-center px-4 py-2 rounded-lg font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition-colors duration-200"
+            >
+              See My CV
+            </a>
+          </div>
         </div>
       </div>
     </header>
