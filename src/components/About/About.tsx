@@ -11,10 +11,10 @@ const About: React.FC = () => {
             <div className="relative group">
               {/* Outer glossy aura */}
               <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full blur-lg opacity-40 group-hover:opacity-75 transition-opacity duration-500"></div>
-              
+
               {/* Profile Image */}
               <img
-                src="bishoyyousef2.png"
+                src="bishoyyousef.png"
                 alt="Bishoy Yousef"
                 className="relative rounded-full w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80 object-cover border-4 border-indigo-500/80 shadow-2xl transition-all duration-300 transform group-hover:scale-[1.02]"
               />

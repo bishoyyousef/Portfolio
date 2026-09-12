@@ -20,6 +20,21 @@ const Portfolio: React.FC = () => {
       github: "https://github.com/bishoyyousef?tab=repositories"
     },
     {
+      imageSrc: "Projects/customer-support.png",
+      imageAlt: "Customer Support Platform",
+      title: "Customer Support Platform",
+      description: "A production-grade, full-stack monorepo customer support platform featuring a shared Node.js/Express REST API, a React Customer Portal, and an Angular Support Workspace with real-time updates via Socket.IO.",
+      techStack: ["React", "Angular 19", "Node.js", "Express", "MongoDB", "Socket.IO"],
+      highlights: [
+        "JWT Auth & Role-Based Access Control",
+        "Real-Time Ticket Updates via Socket.IO",
+        "Manager Analytics Dashboard",
+        "E2E & K6 Performance Testing"
+      ],
+      link: "https://customer-support-platform-psi.vercel.app",
+      github: "https://github.com/bishoyyousef/customer-support-platform"
+    },
+    {
       imageSrc: "Projects/kanban.png",
       imageAlt: "Kanban Task Management App",
       title: "Kanban Task Management App",
