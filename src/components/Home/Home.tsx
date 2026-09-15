@@ -22,7 +22,7 @@ const Home: React.FC = () => {
     >
       <div className="max-w-4xl mx-auto flex flex-col items-center">
         {/* Name Title */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-500 dark:from-indigo-400 dark:via-purple-300 dark:to-indigo-300 bg-clip-text text-transparent">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-4 text-indigo-600 dark:text-indigo-400">
           Bishoy yousef
         </h1>
 
@@ -56,7 +56,7 @@ const Home: React.FC = () => {
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
           <a
             href="#portfolio"
-            className="px-8 py-3.5 rounded-full font-semibold text-white shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-indigo-500/30 text-center bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700"
+            className="px-8 py-3.5 rounded-full font-semibold text-white shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 hover:shadow-indigo-500/30 text-center bg-indigo-600 hover:bg-indigo-700"
           >
             View My Work &rarr;
           </a>
